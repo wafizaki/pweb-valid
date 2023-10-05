@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Belajar Form Validation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form
+        name="formPendaftaran"
+        method="post"
+        onsubmit="return validateForm()"
+      >
+        <div class="form-group">
+          <h5>Nama</h5>
+          <input
+            type="text"
+            name="nama"
+            placeholder="Nama lengkap"
+            class="form-control"
+            minlength="3"
+            maxlength="40"
+          />
+        </div>
+        <div class="form-group">
+          <h5>Email<br /></h5>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Aktif"
+            class="form-control"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            ><br />Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small
+          >
+        </div>
+        <div class="form-group">
+          <h5>NRP Mahasiswa<br /></h5>
+          <input
+            type="text"
+            name="NRP"
+            placeholder="NRP"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <h5>Mata Kuliah<br /></h5>
+          <input
+            type="text"
+            name="matkul"
+            placeholder="Mata Kuliah"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <h5>Dosen<br /></h5>
+          <input
+            type="text"
+            name="dosen"
+            placeholder="Nama Lengkap Dosen"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <h5>Jurusan<br /></h5>
+          <select name="jurusan" class="form-control">
+            <option value="0">Pilih Jurusan</option>
+            <option value="1">Teknik Informatika</option>
+            <option value="2">Teknologi Informasi</option>
+            <option value="3">Sistem Informasi</option>
+            <option value="4">Teknik Biomedik</option>
+            <option value="5">Teknik Komputer</option>
+            <option value="6">Teknik Elektro</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
